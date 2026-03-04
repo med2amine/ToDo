@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "watch": "webpack --watch"
+    "build": "webpack --config webpack.config.cjs",
+    "watch": "webpack --config webpack.config.cjs --watch",
+    "start": "webpack serve --config webpack.config.cjs --open"
   },
   "repository": {
     "type": "git",
@@ -15,7 +16,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/med2amine/ToDo/issues"
   },
@@ -24,7 +25,8 @@
     "css-loader": "^7.1.4",
     "style-loader": "^4.0.0",
     "webpack": "^5.105.3",
-    "webpack-cli": "^6.0.1"
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.3"
   },
   "dependencies": {
     "date-fns": "^4.1.0"
